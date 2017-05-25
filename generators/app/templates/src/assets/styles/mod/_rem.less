@@ -1,0 +1,21 @@
+html,
+body {
+    margin: 0;
+    height: 100%;
+}
+
+.dpui-large-viewport(@page-bg-color) {
+    background: page-bg-color;
+}
+
+.dpui-page-content {
+    min-height: 100%;
+}
+
+.dpui-large-viewport .dpui-page-content {
+    overflow: hidden;
+    margin: 0 auto;
+    width: 640px;
+    box-shadow: 0 0 2rem #000;
+    position: relative;
+}                    

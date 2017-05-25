@@ -1,0 +1,235 @@
+@import './mod/_rem';
+@import './mod/_reset';
+@import './mod/_util';
+@import './mod/arrow';
+@import './mod/fs';
+@import './mod/borderline';
+@import './mod/spinner';
+@import './mod/titlebar';
+@import './mod/simmorefeature';
+@import './mod/simdialog';
+@import './mod/adbanner';
+
+@import '~sprite.less';
+
+@import  './mod/simgemcrafter';
+
+body {
+    background-color: #090611;
+}
+
+.scroll-fix {
+  position: fixed;
+  width: 100%;
+}
+
+section .bg {
+  display: block;
+  width: 100%;
+}
+
+.bannerblock i {
+  display: none;
+  position: absolute;
+  .fs-top(44);
+  left: 50%;
+  .fs-margin-left(-240);
+  .fs-size(516, 272);
+  background: url(../i/sim_un_banner.png) 0 0 no-repeat;
+  .fs-background-size(516, auto);
+}
+
+.env-other .gem-banner .rule-btn {
+  .fs-top(23);
+}
+.bannerblock i.notself {
+  display: block;
+  .fs-background-pos(0, 0);
+}
+.bannerblock i.self {
+  display: block;
+  .fs-background-pos(0, -272);
+}
+.gem-banner {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  .rule-btn {
+    position: absolute;
+    display: block;
+    .fs-top(160);
+    .fs-right(16);
+    .fs(24);
+    .fs-line(32);
+    .fs-width(72);
+    .fs-radius(32);
+    text-align: center;
+    color: #666;
+    background-color: #040911;
+  }
+  .gb-userinfo {
+      .sprites-user-info-bg;
+      position: absolute;
+      top: 0;
+      .fs-left(58);
+      z-index: 2;
+      .avatar {
+          display: block;
+          overflow: hidden;
+          border-radius: 100%;
+          position: absolute;
+          .fs-top(226);
+          .fs-left(7);
+          .fs-size(66,66);
+          .a-img {
+              display: block;
+              width: 100%;
+              height: 100%;
+          }
+      }
+      .role {
+          display: block;
+          .sprites-user-info-ribbon;
+          position: absolute;
+          .fs-left(-4);
+          .fs-bottom(-20);
+          .fs(18);
+          .fs-line-height(42);
+          color: #3a2924;
+          text-align: center;
+      }
+      .nickname {
+          color: #fefefe;
+          .fs(22);
+          .fs-width(180);
+          .fs-margin-left(-90);
+          .fs-bottom(-54);
+          position: absolute;
+          left: 50%;
+          text-align: center;
+          span {
+            .fs-line(30);
+          }
+          .name {
+            display: inline-block;
+            text-align: right;
+            .fs-max-width(102);
+            overflow: hidden;
+            text-overflow:ellipsis;
+            white-space: nowrap;
+            vertical-align: bottom;
+          }
+      }
+  }
+  .remind-switch {
+    display: block;
+    position: absolute;
+    color: #2e6ed3;
+    .fs(22);
+    .fs-top(284);
+    .fs-right(20);
+    .fs-line(42);
+    .switch-icon {
+      display: inline-block;
+      vertical-align: middle;
+      .sprites-reminder-icon-off;
+    }
+    &.on .switch-icon{
+      .sprites-reminder-icon-on;
+    }
+  }
+  .speaker-con {
+    .fs-size(304, 40);
+    .fs-radius(4);
+    background-color: rgba(5, 14, 28, .8);
+    position: absolute;
+    .fs-top(286);
+    .fs-left(232);
+    &:before {
+      content: '';
+      display: block;
+      .sprites-speaker-icon;
+      position: absolute;
+      top: 0;
+      .fs-left(-10);
+    }
+    &.countdown{
+        &:before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        .fs-left(15);
+        .fs-size(28, 28);
+        background: url(../i/sim_un_pic.png) 0 0 no-repeat;
+        .fs-background-size(906, auto);
+        .fs-background-pos(-256, -270);
+        transform: translate(0, -50%);
+      }
+      .speaker-wrap {
+        .fs-margin-left(52);
+      }
+    }
+    .speaker-wrap {
+      .fs-margin-left(40);
+      .fs-margin-right(4);
+      .fs(20);
+      .fs-line(40);
+      color: #9e491e;
+      overflow: hidden;
+      position: relative;
+    }
+    .speaker-msg {
+      display: flex;
+      align-items: center;
+      white-space: nowrap;
+      position: absolute;
+      left: 0;
+      .fs-line(40);
+    }
+    .countdown {
+      display: inline-block;
+      .fs-size(95, 30);
+      .fs-margin-right(8);
+      .fs(20);
+      .fs-line-height(30);
+      text-align: center;
+      color: #FFF;
+      background-color: #000;
+      .fs-radius(4);
+    }
+  }
+}
+
+/* tuandan additional style */
+
+.tuanlist-review {
+  .tr-cont {
+    .list {
+      margin-bottom: 0;
+      &:first-child {
+        .hd {
+          .fs-line-height(50);
+        }
+      }
+    }
+  }
+  .hd {
+    .fs(26);
+    .fs-line(70);
+    .fs-padding(@left:46);
+    background-color: #102341;
+    color: #fff;
+    position: relative;
+    &:before {
+      content: '';
+      display: block;
+      position:absolute;
+      top:0;
+      left: 0;
+      background: url('../i/list-hd-icon.png') no-repeat 0 0;
+      .fs-background-size(44,70);
+      .fs-size(44,70);
+    }
+  }
+}
